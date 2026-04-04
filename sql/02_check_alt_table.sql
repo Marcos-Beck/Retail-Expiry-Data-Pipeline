@@ -36,3 +36,37 @@ PRIMARY KEY (id);
 -- cria coluna calculada de dias vencidos
 ALTER TABLE itens_vencidos
 ADD dias_vencidos AS DATEDIFF(DAY, validade, data_visita);
+
+-- ! CONFERINDO ALTERAÇÕES --
+
+-- conf id ordem
+SELECT TOP 10 id
+FROM itens_vencidos
+ORDER BY id;
+
+-- conf id nulos
+SELECT *
+FROM itens_vencidos
+WHERE id IS NULL;
+
+-- conf id duplicidade
+SELECT
+	COUNT(*) - COUNT(DISCTINCT id) AS duplicatas
+FROM itens_vencidos;
+
+-- conf dias vencidos valores negativos (produtos ainda validos)
+SELECT *
+FROM itens_vencidos
+WHERE dias_vencidos < 0;
+
+-- conf dias vencidos distribuição 
+SELECT
+	MAX(dias_vencidos) AS max,
+	MIN(dias_vencidos) AS min,
+	AVG(dias_vencidos) AS media
+FROM itens_vencidos;
+
+-- conf dias vencidos nulos
+SELECT *
+FROM itens_vencidos
+WHERE dias_vencidos IS NULL;
