@@ -25,3 +25,31 @@ FROM itens_vencidos;
 -- ! AJUSTES NA TABELA DE FATOS
 
 -- adicionando colunas de id
+ALTER TABLE itens_vencidos
+ADD id_setor INT,
+    id_bandeira INT;
+
+-- atualizando colunas de id
+UPDATE f
+SET 
+    f.id_setor = s.id_setor,
+    f.id_bandeira = b.id_bandeira
+FROM itens_vencidos f
+JOIN dim_setor s 
+    ON f.setor = s.nome_setor
+JOIN dim_bandeira b 
+    ON f.bandeira = b.nome_bandeira;
+
+-- criando chaves estrangeiras
+ALTER TABLE itens_vencidos
+ADD CONSTRAINT fk_setor
+FOREIGN KEY (id_setor) REFERENCES dim_setor(id_setor);
+
+ALTER TABLE itens_vencidos
+ADD CONSTRAINT fk_bandeira
+FOREIGN KEY (id_bandeira) REFERENCES dim_bandeira(id_bandeira);
+
+-- removendo colunas antigas
+ALTER TABLE itens_vencidos
+DROP COLUMN setor,
+            bandeira;
