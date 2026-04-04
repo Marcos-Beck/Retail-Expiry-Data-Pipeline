@@ -7,12 +7,12 @@ USE controle_vencidos;
 
 -- criando a tabela 
 CREATE TABLE itens_vencidos (
-    data_visita DATE,
-    bandeira VARCHAR(50),
-    loja INT,
-    quantidade INT,
-    setor VARCHAR(50),
-    validade DATE
+    data_visita DATE NOT NULL,
+    bandeira VARCHAR(50) NOT NULL,
+    loja INT NOT NULL,
+    quantidade INT NOT NULL,
+    setor VARCHAR(50) NOT NULL,
+    validade DATE NOT NULL
 );
 
 --- inserindo dados do arquivo
