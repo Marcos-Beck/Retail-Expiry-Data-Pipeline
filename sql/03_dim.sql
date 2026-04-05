@@ -98,6 +98,22 @@ FROM itens_vencidos
 WHERE id_setor IS NULL
    OR id_bandeira IS NULL;
 
+-- check de valores
+SELECT *
+FROM dim_bandeira
+
+SELECT *
+FROM dim_setor --! foi identificado valores diferentes com o mesmo significado, "food service mercearia" e "mercearia food service". É necessário padronizar os dados para garantir a integridade referencial.
+
+-- corrigindo ids na tabela fatos
+UPDATE itens_vencidos
+SET id_setor = 18 -- id se mercearia food service
+WHERE id_setor = 4 -- id de food service mercearia
+
+-- removendo setor antigo
+DELETE FROM dim_setor
+WHERE id_setor = 4;
+
 -- criação de index para otimizar consultas
 CREATE INDEX idx_setor 
 ON itens_vencidos(id_setor);
