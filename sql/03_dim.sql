@@ -22,6 +22,38 @@ INSERT INTO dim_bandeira (nome_bandeira)
 SELECT DISTINCT bandeira
 FROM itens_vencidos;
 
+-- criando tabela dim data
+CREATE TABLE dim_data (
+    data DATE PRIMARY KEY,
+    ano INT NOT NULL,
+    mes INT NOT NULL,
+    dia INT NOT NULL,
+    nome_mes VARCHAR(20) NOT NULL
+);
+
+-- configurando antes da inserção 
+
+SET LANGUAGE Portuguese;
+
+WITH datas AS (
+    SELECT CAST('2022-01-01' AS DATE) AS data
+    UNION ALL
+    SELECT DATEADD(DAY, 1, data)
+    FROM datas
+    WHERE data < '2025-12-31'
+)
+
+-- populando tabela dim data
+INSERT INTO dim_data
+SELECT 
+    data,
+    YEAR(data) AS ano,
+    MONTH(data) AS mes,
+    DAY(data) AS dia,
+    DATENAME(MONTH, data) AS nome_mes
+FROM datas
+OPTION (MAXRECURSION 0);
+
 -- ! AJUSTES NA TABELA DE FATOS
 
 -- adicionando colunas de id
@@ -49,7 +81,27 @@ ALTER TABLE itens_vencidos
 ADD CONSTRAINT fk_bandeira
 FOREIGN KEY (id_bandeira) REFERENCES dim_bandeira(id_bandeira);
 
--- removendo colunas antigas
+ALTER TABLE itens_vencidos
+ADD CONSTRAINT fk_data
+FOREIGN KEY (data_visita) REFERENCES dim_data(data);
+
+-- removendo colunas antigas desnecessárias
 ALTER TABLE itens_vencidos
 DROP COLUMN setor,
             bandeira;
+
+-- check de preenchimento
+SELECT *
+FROM itens_vencidos
+WHERE id_setor IS NULL
+   OR id_bandeira IS NULL;
+
+-- criação de index para otimizar consultas
+CREATE INDEX idx_setor 
+ON itens_vencidos(id_setor);
+
+CREATE INDEX idx_bandeira 
+ON itens_vencidos(id_bandeira);
+
+CREATE INDEX idx_data
+ON itens_vencidos(data_visita);
