@@ -90,6 +90,8 @@ ALTER TABLE itens_vencidos
 DROP COLUMN setor,
             bandeira;
 
+-- ! CHECKS E OTIMIZAÇÕES --
+
 -- check de preenchimento
 SELECT *
 FROM itens_vencidos
