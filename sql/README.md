@@ -43,7 +43,7 @@ A arquitetura foi projetada utilizando o modelo **Star Schema**, com foco em per
 
 **Alterações da tabela:**
 
-- Adiciona coluna `id` como chave primária (IDENTITY)
+- Adiciona coluna `id` como chave primária = `IDENTITY`
 - Cria coluna calculada `dias_vencidos` = `DATEDIFF(DAY, validade, data_visita)`
 
 **Verificações finais:**
