@@ -127,7 +127,7 @@ Mesmo em um projeto de menor escala, as views foram implementadas para simular u
 
 ## Modelo de Dados
 
-// anexar imagem aqui dps
+![Modelo Dimensional](https://github.com/user-attachments/assets/847f07d2-c043-46c0-8e04-7960a4806a5c)
 
 O modelo abaixo representa a estrutura dimensional adotada, com a tabela fato central conectada às dimensões de apoio.
 
