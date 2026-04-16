@@ -6,11 +6,9 @@ Este diretório contém notebooks Jupyter responsáveis pela exploração, limpe
 
 Essa etapa tem como objetivo garantir a qualidade dos dados antes da modelagem em SQL e construção do dashboard, identificando inconsistências, padrões e possíveis problemas nos registros.
 
----
-
 ## Notebooks
 
-### 01_data_cleaning.ipynb
+### `01_data_cleaning.ipynb`
 
 **Objetivo:** Realizar a limpeza e padronização dos dados brutos, garantindo consistência para as etapas seguintes.
 
@@ -30,7 +28,7 @@ Essa etapa tem como objetivo garantir a qualidade dos dados antes da modelagem e
 - A conferência do coluna dias vencidos foi realizada e apresentou inconsistencias, levando a sua exclusão. A análise de dias vencidos será realizada diretamente na modelagem SQL, garantindo maior precisão e controle sobre os cálculos.
 
 
-### 02_data_vis.ipynb
+### `02_data_vis.ipynb`
 
 **Objetivo:** Validar a consistência das transformações realizadas e explorar os dados já tratados.
 
@@ -45,16 +43,12 @@ Essa etapa tem como objetivo garantir a qualidade dos dados antes da modelagem e
 - Diferenças relevantes entre lojas/bandeiras
 - Indícios de padrões temporais nas ocorrências
 
----
-
 ## Fluxo de execução recomendado
 
 1. Execute `01_data_cleaning.ipynb`
 2. Gere o dataset tratado
 3. Execute `02_data_vis.ipynb`
 4. Analise os resultados e gráficos gerados
-
----
 
 ## Próximos passos
 
