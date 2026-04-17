@@ -134,6 +134,7 @@ O modelo abaixo representa a estrutura dimensional adotada, com a tabela fato ce
 ## Decisões Técnicas
 
 - A coluna `loja` não foi transformada em dimensão, pois a análise de lojas específicas não é o foco principal do projeto, além das informações especificas das lojas terem sido previamente removidas por motivos de privacidade
+- A dimensão de datas foi definida com um intervalo fixo, pois o projeto não possui atualização contínua de dados.
 - Utilização de **Star Schema** para otimizar análises e facilitar integração com ferramentas de BI
 - Separação de dimensões para evitar redundância e melhorar manutenção dos dados
 - Criação de coluna calculada `dias_vencidos` diretamente no banco para padronizar regras de negócio
