@@ -10,44 +10,49 @@ O dashboard é composto por 3 páginas principais:
 
 ### **1. HOME**:
 
-![Página HOME](https://github.com/user-attachments/assets/1ff90083-f534-4026-9681-a643413f93c0)
+![Página - Monitoramento Geral](https://github.com/user-attachments/assets/ae4bfe69-3f21-4bbd-87f0-18aa482f11b4)
 
 A página inicial foi desenvolvida para fornecer uma visão executiva do desempenho geral das ocorrências de produtos vencidos. Seu objetivo é permitir que gestores identifiquem rapidamente o cenário atual antes de aprofundar a análise nas demais páginas do dashboard.
 
 #### Destaques
 - Indicador de criticidade baseado no limite de tolerância de produtos vencidos, permitindo uma rápida avaliação do desempenho da loja.
-- Total de ocorrências de produtos vencidos, oferecendo uma visão geral do volume de itens vencidos.
-- Comparativo com o mesmo período do ano anterior, permitindo identificar tendências e variações sazonais.
 - Identificação automática de lojas e setor com maior incidência de produtos vencidos, facilitando a priorização de ações corretivas.
 - Distruibuição de ocorrências por bandeira, permitindo uma análise comparativa.
 - Evolução das ocorrências por tipo de setor.
-- Filtros interativos para seleção de período, loja, setor e bandeira, permitindo uma análise personalizada e detalhada.
 - Navegação direta para as páginas de análise detalhada, facilitando a exploração dos dados.
 
 ### **2. ANALITÍCA**:
 
-![Página ANALITÍCA](https://github.com/user-attachments/assets/377595d9-8f0d-4606-ba5e-20f84c053dd6)
+![Página - Monitoramento Analítico](https://github.com/user-attachments/assets/4976344a-4387-49e6-b13c-3dc86b8bb065)
 
 A página analítica do dashboard reúne indicadores estratégicos e operacionais para investigação das ocorrências. Os visuais são totalmente interativos, permitindo que qualquer seleção atualize automaticamente todos os indicadores da página.
 
 #### Destaques
-- Nivel de criticidade.
-- Total de ocorrências de produtos vencidos.
-- Comparativo com o mês anterior.
-- Média mensal de ocorrências.
-- Média de ocorrências por visita, oferecendo uma visão mais detalhada sobre a frequência das ocorrências.
+- Indicador de criticidade.
 - Comparativo com o limite de tolerância, permitindo avaliar se a loja está dentro dos padrões estabelecidos.
-
-#### Recursos 
 - Tooltip personalizado com informações detalhadas para cada mês, incluindo total de ocorrências, quantidade de visitas, quantidade de lojas averiguadas, diferença percentual do limite de tolerância e média de ocorrências por visita.
-- Evolução temporal das ocorrências, permitindo identificar tendências e padrões de comportamento ao longo do tempo.
 - Ranking das lojas com maior volume de produtos vencidos, facilitando a identificação de áreas críticas.
-- Distribuição das ocorrências por setor, permitindo uma análise detalhada do desempenho de cada área.
-- Distribuição por unidade, permitindo uma análise comparativa entre diferentes bandeiras.
+- Cards auxiliares nos gráficos de ranking por setor e por loja, exibindo respectivamente o percentual dos top 2 setores e o percentual das top 5 lojas, permitindo uma análise rápida da concentração de ocorrências.
 - Classificação visual das lojas por status de criticidade, facilitando a identificação de áreas que necessitam de atenção imediata.
-- Segmentação por bandeira, loja, periodo e setor.
 
-### **3. SOBRE**:
+### **3. PONTUAL *v1_desktop***: 
+
+![Página - Detalhamento do Mês](https://github.com/user-attachments/assets/d049968b-3126-44f0-baa0-4fc35a179338)
+
+A página pontual do dashboard foi desenvolvida para fornecer uma visão detalhada das ocorrências de produtos vencidos mês a mês, com foco na evolução semanal. Seu objetivo é permitir que gestores analisem o desempenho de cada loja e setor em um curto periodo de tempo, identificando problemas pontuais e tendências emergentes.
+
+#### Destaques
+- Distribuição das ocorrências por dia da semana e por semana do mês, permitindo uma análise detalhada do comportamento das ocorrências em curtos períodos.
+- Visualização em heatmap das ocorrências por loja, facilitando a identificação de padrões e áreas críticas.
+- Cards informativos com as principais informações de destaque negativo do mês, o dia de maior ocorrência, as lojas envolvidas e os totais de ocorrências, permitindo uma análise rápida e eficiente.
+
+### **4. PONTUAL *v2_web***:
+
+![Página - Detalhamento do Mês](https://github.com/user-attachments/assets/4b9060b6-b7ea-48c6-b69d-6b172d5f9127)
+
+A versão web da página foi desenvolvida para fornecer uma versão parecida com a versão desktop, pois apresenta limitações de recursos e visualizações no Power BI Web.
+
+### **5. SOBRE**:
 
 ![Página SOBRE](https://github.com/user-attachments/assets/74541130-29aa-466d-83d9-bcbc3f659cce)
 
