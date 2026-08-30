@@ -37,7 +37,7 @@ A página analítica do dashboard reúne indicadores estratégicos e operacionai
 
 ### **3. PONTUAL *v1_desktop***: 
 
-![Página - Detalhamento do Mês](https://github.com/user-attachments/assets/d049968b-3126-44f0-baa0-4fc35a179338)
+![Página - Detalhamento do Mês](https://github.com/user-attachments/assets/b0c46730-cf37-457e-a29c-e67e7f21ad53)
 
 A página pontual do dashboard foi desenvolvida para fornecer uma visão detalhada das ocorrências de produtos vencidos mês a mês, com foco na evolução semanal. Seu objetivo é permitir que gestores analisem o desempenho de cada loja e setor em um curto periodo de tempo, identificando problemas pontuais e tendências emergentes.
 
